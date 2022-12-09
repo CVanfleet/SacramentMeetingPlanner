@@ -1,0 +1,95 @@
+﻿@page
+@model SacramentMeetingPlanner.Pages.Planners.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Planner</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Planner.ID" />
+            <div class="form-group">
+                <label asp-for="Planner.Date" class="control-label"></label>
+                <input asp-for="Planner.Date" class="form-control" />
+                <span asp-validation-for="Planner.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.Leader" class="control-label"></label>
+                <input asp-for="Planner.Leader" class="form-control" />
+                <span asp-validation-for="Planner.Leader" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.OpeningSong" class="control-label"></label>
+                <input asp-for="Planner.OpeningSong" class="form-control" />
+                <span asp-validation-for="Planner.OpeningSong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.SacramentHymn" class="control-label"></label>
+                <input asp-for="Planner.SacramentHymn" class="form-control" />
+                <span asp-validation-for="Planner.SacramentHymn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.ClosingSong" class="control-label"></label>
+                <input asp-for="Planner.ClosingSong" class="form-control" />
+                <span asp-validation-for="Planner.ClosingSong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.MusicalNumber" class="control-label"></label>
+                <input asp-for="Planner.MusicalNumber" class="form-control" />
+                <span asp-validation-for="Planner.MusicalNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.OpeningPrayer" class="control-label"></label>
+                <input asp-for="Planner.OpeningPrayer" class="form-control" />
+                <span asp-validation-for="Planner.OpeningPrayer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.ClosingPrayer" class="control-label"></label>
+                <input asp-for="Planner.ClosingPrayer" class="form-control" />
+                <span asp-validation-for="Planner.ClosingPrayer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.Speaker1" class="control-label"></label>
+                <input asp-for="Planner.Speaker1" class="form-control" />
+                <span asp-validation-for="Planner.Speaker1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.Speaker2" class="control-label"></label>
+                <input asp-for="Planner.Speaker2" class="form-control" />
+                <span asp-validation-for="Planner.Speaker2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.Speaker3" class="control-label"></label>
+                <input asp-for="Planner.Speaker3" class="form-control" />
+                <span asp-validation-for="Planner.Speaker3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.Speaker4" class="control-label"></label>
+                <input asp-for="Planner.Speaker4" class="form-control" />
+                <span asp-validation-for="Planner.Speaker4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Planner.Subject" class="control-label"></label>
+                <input asp-for="Planner.Subject" class="form-control" />
+                <span asp-validation-for="Planner.Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
