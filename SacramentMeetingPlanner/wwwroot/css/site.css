@@ -1,18 +1,210 @@
 html {
   font-size: 14px;
 }
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+@media (min-width: 0px) {
+  html {
+    font-size: 16px;
+  }
+    #createNewHeader {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .plannerContainer {
+        display: block;
+        margin: auto;
+        margin-bottom: 4rem;
+        width: 100%;
+        border: solid 1px black;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        box-shadow: rgba(0,0,0,.6) 10px 10px 20px;
+    }
+
+    #createForm .form-group {
+        display: block;
+        width: 100%;
+        float: left;
+        margin-bottom: 1rem;
+    }
+
+        #createForm .form-group .control-label {
+            display: block;
+            width: 50%;
+            float: left;
+        }
+
+        #createForm .form-group .form-control {
+            display: block;
+            width: 50%;
+            float: left;
+            text-align: right;
+        }
+
+        #createForm .form-group .text-danger {
+            display: block;
+            width: 100%;
+            float: left;
+        }
+
+    .createHeader {
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+
+    #createTitle {
+        font-weight: bold;
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    #createDateGroup {
+        width: 100% !important;
+    }
+
+    #createDateLabel {
+        width: 100% !important;
+    }
+
+    #createDateInput {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    #createDateError {
+        width: 100% !important;
+    }
+
+    .back {
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .edit {
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin-top: -2rem;
+        margin-bottom: 2rem;
+    }
+
+    #createSubmit {
+        display: block;
+        margin: auto;
+        width: 100% !important;
+    }
+
+    .form-control:disabled, .form-control[readonly] {
+        background-color: white !important;
+    }
+
+    .informationWrapper {
+        display: block;
+        margin: auto;
+        float: left;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .informationText {
+        text-align: center;
+    }
+
+    #musicNumberLabel {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    #musicNumberInput {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    #musicNumberValidation {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .displayRow {
+        display: block;
+        width: 100%;
+        float: left;
+        margin-bottom: 1rem;
+    }
+
+    .displayName {
+        display: block;
+        width: 50%;
+        float: left;
+    }
+
+    .displayValue {
+        display: block;
+        width: 50%;
+        float: left;
+        text-align: right
+    }
+
+    #date {
+        width: 100% !important;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2vw;
+        margin-top: -1rem;
+    }
+
+    #musicName {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    #musicValue {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    #confirm {
+        text-align: center !important;
+        display: block !important;
+        margin: auto !important;
+    }
+
+    #deleteForm {
+        text-align: center;
+        display: block !important;
+        margin: auto !important;
+        margin-top: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .plannerContainer {
+        width: 55%;
+    }
+    #createTitle {
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.2vw;
+    }
+    #date {
+        width: 100% !important;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2vw;
+        margin-top: -1rem;
+    }
 }

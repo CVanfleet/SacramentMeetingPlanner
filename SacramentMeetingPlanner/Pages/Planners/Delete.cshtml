@@ -5,96 +5,136 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
-
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Planner</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.Date)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.Date)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.Leader)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.Leader)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.OpeningSong)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.OpeningSong)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.SacramentHymn)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.SacramentHymn)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.ClosingSong)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.ClosingSong)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.MusicalNumber)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.MusicalNumber)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.OpeningPrayer)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.OpeningPrayer)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.ClosingPrayer)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.ClosingPrayer)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.Speaker1)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.Speaker1)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.Speaker2)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.Speaker2)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.Speaker3)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.Speaker3)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.Speaker4)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.Speaker4)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Planner.Subject)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Planner.Subject)
-        </dd>
-    </dl>
-    
+<h1 id="createNewHeader">Delete</h1>
+<h3 id="confirm">Are you sure you want to delete this?</h3>
+<div id="deleteForm">
     <form method="post">
         <input type="hidden" asp-for="Planner.ID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-page="./Index">Back to List</a>
     </form>
+</div>
+<div class="row">
+    <div class="plannerContainer">
+        <div class="createHeader">
+            <p id="createTitle">Lake Fork Ward</p>
+        </div>
+        <div class="row">
+            <div class="displayRow">
+                <p id="date" class="displayValue">
+                    @Html.DisplayFor(model => model.Planner.Date)
+                </p>
+            </div>
+            <div class="displayRow">
+                <p class="displayName">
+                    President......................................................
+                </p>
+                <p class="displayValue">
+                    @Html.DisplayFor(model => model.Planner.Leader)
+                </p>
+            </div>
+            <div class="displayRow">
+                <p class="displayName">
+                    Conducting.................................................
+                </p>
+                <p class="displayValue">
+                    Nate Ricks
+                </p>
+            </div>
+            <div class="displayRow">
+                <p class="displayName">
+                    Opening Hymn.........................................
+                </p>
+                <p class="displayValue">
+                    "@Html.DisplayFor(model => model.Planner.OpeningSong)"
+                </p>
+            </div>
+            <div class="displayRow">
+                <p class="displayName">
+                    Invocation...................................................
+                </p>
+                <p class="displayValue">
+                    @Html.DisplayFor(model => model.Planner.OpeningPrayer)
+                </p>
+            </div>
+            <div class="informationWrapper">
+                <p class="informationText">Ward Business</p>
+            </div>
+            <div class="displayRow">
+                <p class="displayName">
+                    Sacrament Hymn.........................................
+                </p>
+                <p class="displayValue">
+                    "@Html.DisplayFor(model => model.Planner.SacramentHymn)"
+                </p>
+            </div>
+            <div class="informationWrapper">
+                <p class="informationText">Passing of the Sacrament by the Aaronic Priesthood</p>
+            </div>
+            <div class="displayRow">
+                <p class="displayName">
+                    Speaker Subject(s).......................................
+                </p>
+                <p class="displayValue">
+                    @Html.DisplayFor(model => model.Planner.Subject)
+                </p>
+            </div>
+            <div class="displayRow">
+                <p class="displayName">
+                    Speaker...........................................................
+                </p>
+                <p class="displayValue">
+                    @Html.DisplayFor(model => model.Planner.Speaker1)
+                </p>
+            </div>
+            <div id="speaker2Div" class="displayRow">
+                <p class="displayName">
+                    Speaker...........................................................
+                </p>
+                <p id="speaker2" class="displayValue">
+                    @Html.DisplayFor(model => model.Planner.Speaker2)
+                </p>
+            </div>
+            <div id="musicValueDiv" class="displayRow">
+                <p id="musicName" class="displayName">
+                    @Html.DisplayNameFor(model => model.Planner.MusicalNumber)
+                </p>
+                <p id="musicValue" class="displayValue">
+                    "@Html.DisplayFor(model => model.Planner.MusicalNumber)"
+                </p>
+            </div>
+            <div id="speaker3Div" class="displayRow">
+                <p class="displayName">
+                    Speaker...........................................................
+                </p>
+                <p id="speaker3" class="displayValue">
+                    @Html.DisplayFor(model => model.Planner.Speaker3)
+                </p>
+            </div>
+            <div id="speaker4Div" class="displayRow">
+                <p class="displayName">
+                    Speaker...........................................................
+                </p>
+                <p id="speaker4" class="displayValue">
+                    @Html.DisplayFor(model => model.Planner.Speaker4)
+                </p>
+            </div>
+            <div class="displayRow">
+                <p class="displayName">
+                    Closing Hymn..............................................
+                </p>
+                <p class="displayValue">
+                    "@Html.DisplayFor(model => model.Planner.ClosingSong)"
+                </p>
+            </div>
+            <div class="displayRow">
+                <p class="displayName">
+                    Benediction...................................................
+                </p>
+                <p class="displayValue">
+                    @Html.DisplayFor(model => model.Planner.ClosingPrayer)
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
