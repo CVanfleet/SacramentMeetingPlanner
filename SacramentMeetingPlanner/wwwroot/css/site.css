@@ -208,3 +208,36 @@ body {
         margin-top: -1rem;
     }
 }
+
+
+/* STYLE ADDITIONS */
+body {
+    background-color: #c4e8dc;
+}
+
+header, footer {
+    background-color: #9dd8c4;
+}
+
+
+nav a {
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #42a584;
+}
+
+nav a:active {
+    background-color: #70e0ba;
+}
+
+
+a:hover {
+    color: #42a584;
+}
+
+a:active {
+    color: #42a584;
+}
