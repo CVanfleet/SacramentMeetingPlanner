@@ -29,6 +29,7 @@ body {
         padding-top: 2rem;
         padding-bottom: 2rem;
         box-shadow: rgba(0,0,0,.6) 10px 10px 20px;
+        background-color: white;
     }
 
     #createForm .form-group {
@@ -240,4 +241,10 @@ a:hover {
 
 a:active {
     color: #42a584;
+}
+.indexContainer {
+    background-color: white;
+    padding: 3rem;
+    border: 2px solid black;
+    border-radius: 7px;
 }
